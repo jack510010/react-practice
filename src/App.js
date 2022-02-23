@@ -1,5 +1,4 @@
-import ExpenseItem from './components/ExpenseItem'
-import CostMeMoney from './components/CostMeMoney'
+import Expenses from './components/Expenses'
 
 function App() {
   const expenses = [
@@ -24,58 +23,10 @@ function App() {
     },
   ]
 
-  const spendMoney = [
-    {
-      id: 1,
-      item: 'ps5',
-      price: 600,
-      date: new Date(2022, 1, 1),
-    },
-    {
-      id: 2,
-      item: 'MacBook Pro',
-      price: 1200,
-      date: new Date(2021, 12, 31),
-    },
-  ]
-
   return (
     <div>
       <h2>Let's get started!</h2>
-      <ExpenseItem
-        title={expenses[0].title}
-        amount={expenses[0].amount}
-        date={expenses[0].date}
-      ></ExpenseItem>
-
-      <ExpenseItem
-        title={expenses[1].title}
-        amount={expenses[1].amount}
-        date={expenses[1].date}
-      ></ExpenseItem>
-
-      <ExpenseItem
-        title={expenses[2].title}
-        amount={expenses[2].amount}
-        date={expenses[2].date}
-      ></ExpenseItem>
-
-      <ExpenseItem
-        title={expenses[3].title}
-        amount={expenses[3].amount}
-        date={expenses[3].date}
-      ></ExpenseItem>
-
-      <CostMeMoney
-        id={spendMoney[0].id}
-        item={spendMoney[0].item}
-        price={spendMoney[0].price}
-      />
-      <CostMeMoney
-        id={spendMoney[1].id}
-        item={spendMoney[1].item}
-        price={spendMoney[1].price}
-      />
+      <Expenses items={expenses} />
     </div>
   )
 }
