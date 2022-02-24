@@ -1,6 +1,6 @@
 import './ExpenseItem.css'
 import ExpenseDate from './ExpenseDate'
-import Card from './Card'
+import Card from '../UI/Card'
 
 function ExpenseItem(props) {
   //這個通常取名叫props， 這樣比較不容易搞混。
