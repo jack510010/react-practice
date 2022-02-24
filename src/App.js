@@ -1,6 +1,7 @@
-import Expenses from './components/Expenses'
+import Expenses from './components/Expenses/Expenses'
 
-function App() {
+const App = () => {
+  // function App () {} 可以寫成 const App = () => {}
   const expenses = [
     {
       id: 'e1',
