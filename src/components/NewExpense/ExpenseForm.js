@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import './ExpenseForm.css'
 
-const ExpenseForm = () => {
+const ExpenseForm = (props) => {
   const [enteredTitle, setEnteredTitle] = useState('') // 可以這樣寫，但是今天如果有 100個 變數，你就不會這樣寫
   const [enteredAmount, setEnteredAmount] = useState('') // 可以這樣寫，但是今天如果有 100個 變數，你就不會這樣寫
   const [enteredDate, setEnteredDate] = useState('') // 可以這樣寫，但是今天如果有 100個 變數，你就不會這樣寫
@@ -51,7 +51,7 @@ const ExpenseForm = () => {
       date: new Date(enteredDate),
     }
 
-    console.log(expenseData) // 測試是否有效果
+    props.onSaveExpenseData(expenseData)
 
     setEnteredTitle('')
     setEnteredAmount('')
