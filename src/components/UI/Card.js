@@ -7,7 +7,7 @@ function Card(props) {
     the value of this special children props will always be the content between the opening and closing tags of your custom components.
     這個 props.children 是內建的。
 
-    custom components only support what you tell them to support. So we have tweak the code in the card component.
+    custom components only support what you tell them to support. So we have to tweak the code in the card component.
     意思是共用的 .card{css} 可以提取出來沒錯，做一個公版給大家用，但還要再補上其他沒共用的 css ，不然會跑版， 譬如補上 font-size or display: flex 的class等等之類。
 
     
